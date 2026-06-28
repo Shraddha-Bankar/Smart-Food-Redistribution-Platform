@@ -1,0 +1,123 @@
+=================================================================
+SMART FOOD REDISTRIBUTION PLATFORM — PROJECT NOTES
+=================================================================
+
+PROJECT TYPE
+-------------
+React (JSX) frontend, bundled with Vite, deployed on Vercel.
+(Confirmed from repo root: vite.config.js, index.html, vercel.json,
+package.json, .eslintrc.cjs)
+
+-------------------------------------------------------------------
+1. PREREQUISITES
+-------------------------------------------------------------------
+- Node.js  v18 or higher   (check: node -v)
+- npm      v9 or higher    (check: npm -v)
+- Git
+
+-------------------------------------------------------------------
+2. CLONE THE REPOSITORY
+-------------------------------------------------------------------
+git clone https://github.com/Shraddha-Bankar/Smart-Food-Redistribution-Platform.git
+cd Smart-Food-Redistribution-Platform
+
+-------------------------------------------------------------------
+3. INSTALL DEPENDENCIES
+-------------------------------------------------------------------
+npm install
+
+-------------------------------------------------------------------
+4. ENVIRONMENT VARIABLES
+-------------------------------------------------------------------
+Copy the example env file and fill in your own values:
+
+    cp .env.example .env        (Mac/Linux)
+    copy .env.example .env      (Windows)
+
+Typical variables you may need to set (update based on your actual
+.env.example contents):
+
+    VITE_API_BASE_URL=
+    VITE_FIREBASE_API_KEY=
+    VITE_FIREBASE_AUTH_DOMAIN=
+    VITE_FIREBASE_PROJECT_ID=
+
+-------------------------------------------------------------------
+5. RUN THE PROJECT LOCALLY (DEVELOPMENT MODE)
+-------------------------------------------------------------------
+npm run dev
+
+By default Vite runs on:
+    http://localhost:5173
+
+-------------------------------------------------------------------
+6. BUILD FOR PRODUCTION
+-------------------------------------------------------------------
+npm run build
+
+Output is generated in the /dist folder.
+
+-------------------------------------------------------------------
+7. PREVIEW PRODUCTION BUILD LOCALLY
+-------------------------------------------------------------------
+npm run preview
+
+-------------------------------------------------------------------
+8. LINTING
+-------------------------------------------------------------------
+npm run lint
+
+(Uses rules defined in .eslintrc.cjs)
+
+-------------------------------------------------------------------
+9. DEPLOYMENT (VERCEL)
+-------------------------------------------------------------------
+This project already includes vercel.json, meaning it's pre-configured
+for Vercel deployment.
+
+Option A — via Vercel CLI:
+    npm install -g vercel
+    vercel login
+    vercel --prod
+
+Option B — via Vercel Dashboard:
+    1. Go to https://vercel.com
+    2. Import the GitHub repo
+    3. Set the same environment variables from .env in
+       Project Settings > Environment Variables
+    4. Click Deploy
+
+-------------------------------------------------------------------
+10. GIT WORKFLOW (BASIC COMMANDS USED FOR THIS PROJECT)
+-------------------------------------------------------------------
+git status                     # check changes
+git add .                      # stage changes
+git commit -m "message"        # commit changes
+git push origin main           # push to GitHub
+
+git pull origin main            # get latest changes
+git checkout -b feature/xyz      # create new branch
+git merge feature/xyz            # merge branch into main
+
+-------------------------------------------------------------------
+11. COMMON ISSUES
+-------------------------------------------------------------------
+- "command not found: npm"  -> Install Node.js from nodejs.org
+- Blank page after build    -> Check "base" path in vite.config.js
+- Env variables not working -> Vite env vars MUST start with VITE_
+- CORS errors                -> Check VITE_API_BASE_URL / backend CORS config
+
+-------------------------------------------------------------------
+12. TODO / THINGS TO VERIFY (since some details were assumed)
+-------------------------------------------------------------------
+[ ] Confirm exact npm scripts in package.json (dev/build/preview/lint)
+[ ] Confirm actual backend (Node/Express? Firebase? Supabase?)
+[ ] Confirm database used (MongoDB / MySQL / Firestore?)
+[ ] Confirm authentication method (JWT / Firebase Auth / Sessions?)
+[ ] Update this file once exact .env variables are known
+
+=================================================================
+NOTE: Some commands above (npm run dev/build/lint) assume standard
+Vite defaults. Please paste your actual package.json "scripts" block
+so I can correct this file to match exactly.
+=================================================================
