@@ -1,223 +1,288 @@
-# FoodBridge: Smart Food Redistribution System
+# 🍽️ Smart Food Redistribution Platform
 
-**Live Demo:** https://smart-food-redistribution-platform-eight.vercel.app/
+**Live Demo:** https://smart-food-redistribution-platform-eight.vercel.app/ 
+**Repository:** https://github.com/Shraddha-Bankar/Smart-Food-Redistribution-Platform
 
-**Author(s):** Shraddha Bankar  
-**Affiliation:** Computer Science Engineering (Data Science)  
+---
+
+# Smart Food Redistribution Platform: A Web-Based System for Reducing Food Waste through Donor–NGO Connectivity
+
+**Author:** Shraddha Bankar  
+**Affiliation:** Computer Science & Engineering Data Science 
 **Date:** June 2026
 
 ---
 
-# Abstract
+## 📖 Abstract
 
-FoodBridge is a smart food redistribution platform designed to reduce food waste and connect food donors with NGOs and volunteers. The system provides role-based access for donors, NGOs, volunteers, and administrators to manage food donations and deliveries efficiently. AI-assisted recommendations help identify suitable recipients for available food. Features such as delivery tracking, emergency requests, messaging, notifications, and analytics improve coordination and resource management. The platform promotes sustainable food distribution while helping communities in need. FoodBridge demonstrates how modern web technologies and AI can address social and environmental challenges through an efficient and user-friendly solution.
+Food wastage at the household, restaurant, and event level continues to coexist with widespread food insecurity, largely due to the absence of an efficient mechanism connecting surplus food donors with those in need.
 
----
+This project presents the **Smart Food Redistribution Platform**, a web-based application built using **React** and **Vite**, that enables donors (individuals, restaurants, event organizers) to list surplus food while verified NGOs and volunteers can claim and redistribute it in real time.
 
-# Introduction
+The platform includes role-based dashboards for **Donors**, **NGOs**, and **Administrators**, along with notification and tracking mechanisms to ensure timely pickup before food expiry. The application is deployed using **Vercel** for continuous deployment and scalability.
 
-Food waste and hunger are major global challenges affecting millions of people every day. Large amounts of surplus food from restaurants, hotels, events, and households are often discarded despite being suitable for consumption. At the same time, many communities face food insecurity and lack access to nutritious meals.
+Future enhancements include AI-powered food matching, geolocation, and route optimization.
 
-FoodBridge aims to bridge this gap by providing a digital platform that connects food donors with NGOs and volunteers. The platform streamlines the process of donating, accepting, and delivering food while ensuring efficient coordination among all stakeholders. By leveraging modern web technologies and AI-assisted recommendations, FoodBridge helps reduce food waste, improve food accessibility, and support social welfare initiatives.
-
----
-
-# Literature Review
-
-Food donation platforms and food banks have been developed worldwide to address food waste and hunger. Organizations use technology to connect surplus food providers with charities and communities in need. Recent developments in digital platforms, route optimization, AI recommendation systems, and real-time communication tools have significantly improved food redistribution efficiency.
-
-FoodBridge integrates these concepts into a single platform that supports donation management, volunteer coordination, analytics, and AI-assisted recommendations for better decision-making and resource allocation.
+**Keywords:** Food Waste Reduction, Food Redistribution, React, Vite, NGO Donation Platform, Sustainable Development
 
 ---
 
-# Methodology
+# I. Introduction
 
-FoodBridge follows a role-based workflow to ensure smooth food redistribution.
+Food waste is one of the most pressing sustainability challenges worldwide. Every year, millions of tons of edible food are discarded while millions of people continue to suffer from hunger.
 
-### Donor
-- Registers and logs into the platform.
-- Creates food donation requests.
-- Provides food details, quantity, pickup location, and expiry information.
-- Tracks donation status.
+The Smart Food Redistribution Platform bridges this gap through a digital solution that connects surplus food donors with NGOs and volunteers in real time before food expires.
 
-### NGO
-- Views available food donations.
-- Accepts suitable donation requests.
-- Manages received donations.
-- Creates emergency food requests when required.
+### Objectives
 
-### Volunteer
-- Receives delivery assignments.
-- Picks up food from donors.
-- Delivers food to NGOs or beneficiaries.
-- Updates delivery status.
-
-### Administrator
-- Manages users and platform activities.
-- Monitors donations and deliveries.
-- Reviews analytics and reports.
-- Ensures platform efficiency and security.
-
-### AI Recommendation System
-- Analyzes donation details.
-- Suggests suitable NGOs based on food type, quantity, and requirements.
-- Improves distribution efficiency.
+- Provide an easy-to-use interface for food donation.
+- Enable NGOs to discover and claim available donations.
+- Maintain transparency through dashboards and status tracking.
+- Develop a scalable web application using modern frontend technologies.
 
 ---
 
-# Implementation
+# II. Literature Review
 
-## Frontend Technologies
+Existing food redistribution systems include:
 
-- HTML
-- CSS
-- JavaScript
-- React
-- Vite
+- Traditional NGO-operated food banks
+- Mobile food donation applications
+- Blockchain-based donation platforms
+- Academic food-sharing prototypes
 
-## Development Tools
+### Research Gap
 
-- Visual Studio Code
-- Git
-- GitHub
+Most existing systems lack:
 
-## APIs and Services
+- Lightweight web interfaces
+- Proper role-based access
+- Real-time donation visibility
+- Easy deployment
 
-- OpenRouter API
-- Vercel Deployment
-
-## Core Features
-
-- User Authentication
-- Role-Based Access Control
-- Food Donation Management
-- NGO Request Management
-- Volunteer Delivery Management
-- AI-Powered Recommendations
-- Real-Time Notifications
-- Messaging System
-- Analytics Dashboard
-- Emergency Food Requests
+The Smart Food Redistribution Platform addresses these limitations.
 
 ---
 
-# Working of the System
+# III. Methodology
 
-### Step 1: User Registration
+The project follows an iterative frontend development methodology.
 
-Users register on the platform as:
+### 1. Requirement Analysis
+
+Identify user roles:
+
 - Donor
 - NGO
-- Volunteer
 - Administrator
 
-### Step 2: Food Donation Creation
+### 2. System Design
 
-Donors submit:
-- Food Name
+Develop reusable React components and dashboards.
+
+### 3. Technology Selection
+
+- React
+- Vite
+- CSS
+- Git
+- GitHub
+- Vercel
+
+### 4. Implementation
+
+Develop modules in stages:
+
+- Authentication
+- Donor Dashboard
+- NGO Dashboard
+- Admin Dashboard
+- Deployment
+
+### 5. Deployment
+
+Continuous deployment through Vercel using GitHub integration.
+
+### 6. Version Control
+
+Git-based workflow with incremental commits.
+
+---
+
+# IV. System Architecture / Implementation
+
+## A. Technology Stack
+
+| Technology | Purpose |
+|------------|----------|
+| React | Frontend Framework |
+| Vite | Build Tool |
+| CSS | Styling |
+| ESLint | Code Quality |
+| Vercel | Deployment |
+| Git & GitHub | Version Control |
+
+---
+
+## B. Core Modules
+
+### Authentication Module
+
+- User Login
+- User Registration
+- Role Assignment
+
+### Donor Module
+
+- Add Food Donation
 - Quantity
-- Pickup Location
-- Expiry Information
-- Additional Notes
+- Food Type
+- Expiry Date
 
-### Step 3: NGO Selection
+### NGO Module
 
-NGOs browse available donations and accept suitable food donations.
+- Browse Donations
+- Claim Food
+- Update Status
 
-### Step 4: Volunteer Assignment
+### Admin Module
 
-Volunteers receive delivery assignments and coordinate pickup and delivery.
+- User Management
+- Donation Monitoring
+- Platform Administration
 
-### Step 5: Delivery Tracking
+### Notification Module
 
-Volunteers update delivery progress:
-- Assigned
-- Picked Up
-- In Transit
-- Delivered
-
-### Step 6: AI Recommendations
-
-The AI system recommends the most suitable NGOs based on donation requirements and NGO needs.
-
-### Step 7: Analytics and Monitoring
-
-Administrators monitor:
-- Total Donations
-- Active Users
-- Delivery Status
-- Food Redistribution Statistics
+- Donation Alerts
+- Claim Updates
 
 ---
 
-# Results and Discussion
+## C. Environment Configuration
 
-FoodBridge successfully provides a centralized platform for managing food donations and redistribution activities. The platform improves communication between donors, NGOs, volunteers, and administrators. AI-assisted recommendations help optimize food allocation, while analytics provide valuable insights into platform performance.
-
-The system demonstrates how technology can be used to address social challenges by reducing food waste and supporting communities in need.
+The repository includes a `.env.example` file for securely storing environment variables instead of exposing sensitive credentials.
 
 ---
 
-# Key Features
+## D. Deployment Pipeline
 
-- Secure Authentication System
-- Role-Based Dashboard
-- Food Donation Management
-- NGO Acceptance Workflow
-- Volunteer Delivery Tracking
-- Emergency Food Requests
-- AI-Based NGO Recommendations
-- Real-Time Notifications
-- Messaging System
-- Analytics Dashboard
-- Responsive User Interface
-- Scalable Architecture
+The application uses **Vercel** for Continuous Deployment.
 
----
+Whenever code is pushed to the **main** branch:
 
-# Limitations
-
-- Limited GPS integration.
-- AI recommendations depend on external APIs.
-- Requires internet connectivity.
-- Limited real-time tracking capabilities.
-- Backend and database features can be further enhanced.
+```
+GitHub
+      ↓
+Automatic Build
+      ↓
+Vercel Deployment
+      ↓
+Live Website Updated
+```
 
 ---
 
-# Future Scope
+# V. Conclusion
 
-- Mobile Application Development
-- Real-Time GPS Tracking
-- Push Notifications
-- Multi-Language Support
-- Advanced AI Recommendation Models
-- Cloud Database Integration
-- Predictive Demand Forecasting
-- QR-Based Food Verification
-- Automated Route Optimization
-- Integration with Government and NGO Networks
+The Smart Food Redistribution Platform demonstrates how a modern web application can efficiently connect surplus food donors with NGOs, reducing food waste while helping communities in need.
+
+Using React, Vite, GitHub, and Vercel ensures fast development, scalability, and an excellent user experience.
 
 ---
 
-# Conclusion
+# VI. Future Scope
 
-FoodBridge provides an effective and scalable solution for reducing food waste and improving food distribution through digital technology. The platform connects donors, NGOs, volunteers, and administrators within a single ecosystem, simplifying the donation process and enhancing operational efficiency.
-
-By combining AI-powered recommendations with modern web development technologies, FoodBridge demonstrates the potential of technology-driven social impact solutions. The project contributes to sustainable food management practices and supports efforts to reduce hunger and food insecurity.
+- 🤖 AI-Based NGO Matching
+- 📍 Google Maps Integration
+- 🚚 Route Optimization
+- 📱 Progressive Web App (PWA)
+- 📲 Push Notifications
+- 📊 Analytics Dashboard
+- ⛓ Blockchain-Based Donation Verification
 
 ---
 
 # References
 
-[1] Food and Agriculture Organization (FAO), *The State of Food and Agriculture*, 2022.
+1. Food and Agriculture Organization (FAO), *Global Food Losses and Food Waste*.
+2. World Resources Institute, *Reducing Food Loss and Waste*.
+3. React Documentation — https://react.dev
+4. Vite Documentation — https://vitejs.dev
+5. Vercel Documentation — https://vercel.com/docs
+6. GitHub Food Redistribution Projects
+7. Sustainable Development Goal 2 (Zero Hunger)
 
-[2] United Nations, *Sustainable Development Goal 2: Zero Hunger*.
+---
 
-[3] React Documentation: https://react.dev
+## 📁 Project Structure
 
-[4] Vite Documentation: https://vite.dev
+```
+Smart-Food-Redistribution-Platform/
+│
+├── public/
+├── src/
+│   ├── components/
+│   ├── pages/
+│   ├── assets/
+│   ├── App.jsx
+│   └── main.jsx
+│
+├── .env.example
+├── package.json
+├── vite.config.js
+├── vercel.json
+├── README.md
+└── LICENSE
+```
 
-[5] OpenRouter API Documentation: https://openrouter.ai/docs
+---
 
-[6] Vercel Documentation: https://vercel.com/docs
+## 🚀 Getting Started
+
+Clone the repository
+
+```bash
+git clone https://github.com/Shraddha-Bankar/Smart-Food-Redistribution-Platform.git
+```
+
+Navigate into the project
+
+```bash
+cd Smart-Food-Redistribution-Platform
+```
+
+Install dependencies
+
+```bash
+npm install
+```
+
+Start the development server
+
+```bash
+npm run dev
+```
+
+Build for production
+
+```bash
+npm run build
+```
+
+---
+
+## 👩‍💻 Author
+
+**Shraddha Bankar**
+
+Computer Science Engineering (Data Science)
+
+---
+
+> **Note:** Update the following before final submission:
+>
+> - Live Demo URL
+> - College/University Name
+> - Backend/Database details (if applicable)
+> - Screenshots (optional)
+> - Additional references if used
