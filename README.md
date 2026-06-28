@@ -268,17 +268,6 @@ Build for production
 ```bash
 npm run build
 ```
-
----
-
-## 👩‍💻 Author
-
-**Shraddha Bankar**
-
-Computer Science Engineering (Data Science)
-
----
-
 > **Note:** Update the following before final submission:
 >
 > - Live Demo URL
